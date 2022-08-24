@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Coloque o titulo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="authService.id as usercde">
+  <ion-grid>
+    <ion-item lines="none">
+      <ion-icon slot="end" name="power" color="danger" (click)="authService.SignOut()" expand="block"></ion-icon>
+      <ion-item lines="none">
+        <h2>{{usercde.instituto}}</h2>
+      </ion-item>
+    </ion-item>
+
+    
+    <ion-row>
+      <ion-col size="5">
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-img src="{{usercde.foto}}"></ion-img>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="7" class="ion-text-start">
+
+        <ion-item lines="none" class="user-list ion-no-padding">
+          <ion-label class="ion-no-margin">Nome</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes ion-no-padding">
+          <ion-label class="ion-no-margin">{{usercde.nome}}</ion-label>
+        </ion-item>
+
+        <ion-item lines="none" class="user-list ion-no-padding">
+          <ion-label class="ion-no-margin"><br>Empresa</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes ion-no-padding">
+          <ion-label class="ion-no-margin">{{usercde.empresa}}</ion-label>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="user-list">
+          <ion-label class="ion-no-margin">ID</ion-label>
+        </ion-item>
+        <ion-item class="user-nomes">
+          <ion-label class="ion-no-margin">{{usercde.id}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" class="user-list">
+          <ion-label class="ion-no-margin"></ion-label>
+        </ion-item>
+        <ion-item class="user-nomes">
+          <ion-label class="ion-no-margin">{{usercde.periodo}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+      <ion-tab-button>
+        <ion-icon name="albums"></ion-icon>
+        <ion-label>Documentos</ion-label>
+      </ion-tab-button>

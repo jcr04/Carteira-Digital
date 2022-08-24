@@ -1,0 +1,7 @@
+{
+  "name": "Carteirinha Digital",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
