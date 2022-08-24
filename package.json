@@ -1,7 +1,7 @@
 {
-  "name": "cde",
+  "name": "carteira digital",
   "version": "1.0.0",
-  "author": "Rose",
+  "author": "Joao",
   "homepage": "https://microstorage.com.br/",
   "scripts": {
     "ng": "ng",
